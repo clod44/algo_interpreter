@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpreter Engine</title>
+    <link rel="stylesheet" href="lib/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font/bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="lib/codemirror-5.65.21/lib/codemirror.css">
+    <link rel="stylesheet" href="lib/codemirror-5.65.21/addon/hint/show-hint.css">
+    <link rel="stylesheet" href="components/editor/editor.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-body text-body">
+
+    <main class="container py-2">
+        <!-- Main Debugger Panel Wrapper -->
+        <div id="debug-panel" class="card shadow-sm mb-3">
+            <div class="card-body p-2 d-flex flex-column">
+                
+                <!-- Declarative Debugger Toolbar Component -->
+                <debugger-component></debugger-component>
+
+              <!-- Workspace Area (Flexbox Layout) -->
+                <div class="d-flex flex-column flex-lg-row gap-2 overflow-hidden" style="height: 450px; min-width: 0;">
+                    
+                    <!-- Left Column: Code Editor (min-width: 0 allows it to respect bounds and scroll) -->
+                    <section id="panel-code" class="d-flex flex-column" style="flex: 7 1 0%; min-width: 0;">
+                        <editor-component id="my-editor-widget" class="d-flex flex-column h-100" style="min-width: 0;"></editor-component>
+                    </section>
+
+                    <!-- Right Column: Output & Memory -->
+                    <section id="panel-right" class="d-flex flex-column gap-2" style="flex: 5 1 0%; min-width: 0;">
+                        <output-component class="d-flex flex-column flex-fill" style="min-height: 0; min-width: 0;"></output-component>
+                        <memory-component class="d-flex flex-column flex-fill" style="min-height: 0; min-width: 0;"></memory-component>
+                    </section>
+                </div>
+                <textarea id="output-display" hidden readonly></textarea>
+            </div>
+        </div>
+
+        <docs-component></docs-component>
+        <gallery-component id="my-gallery-widget"></gallery-component>
+    </main>
+    
+    <settings-component id="my-settings-widget"></settings-component>
+
+    <script src="lib/jquery-4.0.0/jquery-4.0.0.min.js"></script>
+    <script src="lib/codemirror-5.65.21/lib/codemirror.js"></script>
+    <script src="lib/codemirror-5.65.21/addon/mode/simple.js"></script>
+    <script src="lib/codemirror-5.65.21/addon/hint/show-hint.js"></script>
+    <script src="algo.js"></script>
+    <script src="examples.js"></script>
+    <script src="components/settings/settings.js"></script>
+    <script src="components/editor/editor.js"></script>
+    <script src="components/gallery/gallery.js"></script>
+    <script src="components/output/output.js"></script>
+    <script src="components/memory/memory.js"></script>
+    <script src="components/debugger/debugger.js"></script>
+    <script src="components/share/share.js"></script>
+    <script src="components/docs/docs.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* Force scrollbars to stay visible and prevent auto-fading in Webkit */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bs-tertiary-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--bs-secondary);
+    border-radius: 4px;
+    /* Force opacity so it never fades out */
+    opacity: 1 !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bs-primary);
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bs-secondary) var(--bs-tertiary-bg);
+}

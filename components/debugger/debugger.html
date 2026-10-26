@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="lib/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/font/bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+
+<div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2 flex-wrap gap-2">
+    <div class="lh-1">
+        <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem; letter-spacing: 0.5px;">Debugger</small>
+        <div id="debug-status" class="fs-6 fw-bold">Ready to start</div>
+    </div>
+    <div>
+        <div class="btn-group btn-group-sm shadow-sm" role="group" aria-label="Debugger controls">
+            <button id="step-back" class="btn btn-secondary py-0" type="button" aria-label="Step back" disabled>
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                <i class="bi bi-skip-backward-fill btn-icon"></i>
+            </button>
+            <button id="debug-reset" class="btn btn-secondary py-0" type="button" aria-label="Reset" title="Reset to start"><i class="bi bi-arrow-counterclockwise"></i></button>
+            <button id="debug-run" class="btn btn-primary py-0" type="button" aria-label="Run all">
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                <i class="bi bi-play-fill btn-icon"></i>
+            </button>
+            <button id="step-forward" class="btn btn-secondary py-0" type="button" aria-label="Step forward" disabled><i class="bi bi-skip-forward-fill"></i></button>
+        </div>
+        <button id="debug-settings" class="btn btn-sm py-0 btn-outline-secondary shadow-sm ms-1" type="button" aria-label="Settings"><i class="bi bi-gear-fill"></i></button>
+    </div>
+</div>

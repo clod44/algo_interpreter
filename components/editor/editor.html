@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="lib/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/font/bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+<link rel="stylesheet" href="lib/codemirror-5.65.21/lib/codemirror.css">
+<link rel="stylesheet" href="lib/codemirror-5.65.21/addon/hint/show-hint.css">
+<link rel="stylesheet" href="components/editor/editor.css">
+
+<div class="card h-100 shadow-sm overflow-hidden d-flex flex-column" style="min-height: 280px; min-width: 0;">
+    <div class="card-header d-flex justify-content-between align-items-center bg-body-tertiary border-bottom py-1 px-2 flex-shrink-0" style="min-width: 0;">
+        <div class="d-flex align-items-center gap-2" style="min-width: 0;">
+            <span class="fw-bold text-secondary text-uppercase" style="font-size: 0.7rem;">Source</span>
+            <share-component id="my-share-widget"></share-component>
+        </div>
+        <span id="debug-location" class="badge text-bg-primary" style="font-size: 0.65rem;">No active line</span>
+    </div>
+    <!-- Added overflow-hidden and min-width: 0 here -->
+    <div class="card-body p-0 d-flex flex-column bg-body flex-grow-1 overflow-hidden" style="min-height: 220px; min-width: 0;">
+        <textarea id="code-input"></textarea>
+    </div>
+</div>
